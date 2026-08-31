@@ -6,7 +6,7 @@ This file separates reproducible local evidence from checks that require signing
 |---|---|---|---|---|
 | macOS arm64 | Candidate build in this release batch | `audit:brand`, `audit:release`, safety scan, manifest, SHA256 | Local GUI smoke recorded separately | 未签名、未公证 |
 | Windows x64 | Cross-built candidate in this release batch | Installer and unpacked payload 结构验证, safety scan, manifest, SHA256 | Windows 真机未验收 | 未签名 |
-| macOS universal | Best-effort only | Recorded if produced | Not a release requirement | No claim until evidence exists |
+| macOS universal | Candidate produced in this release batch | Payload audit and SHA256 | No Intel runtime host check | 未签名、未公证 |
 
 ## Required local verification
 
@@ -32,3 +32,5 @@ The release safety scan must run on a staging tree without `.git`, `node_modules
 - Independent review of any user-created Pack's source rights, consent, and intended distribution.
 
 CozyKin never treats structural Pack validation as proof of ownership or permission.
+
+Exact candidate hashes and smoke results are recorded under `release-evidence/`.

@@ -4,3 +4,4 @@ dist-renderer/
 .DS_Store
 *.log
 examples/*.zip
+release/
