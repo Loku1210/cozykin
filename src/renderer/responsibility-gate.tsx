@@ -53,7 +53,7 @@ export function ResponsibilityGate({
       />
       <span>我对所生成角色负责且不商业化传播</span>
     </label>
-    <p id={RESPONSIBILITY_HELP_ID}>勾选此项后才可安装当前已验证的角色包；更换角色包或关闭验证结果后需重新确认。</p>
+    <p id={RESPONSIBILITY_HELP_ID}>确认只对当前这一个已验证 Pack 有效；更换角色包或关闭验证结果后需重新确认。</p>
   </div>;
 }
 

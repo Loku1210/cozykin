@@ -136,3 +136,22 @@ button { font: inherit; }
 .issue-list p { margin: 7px 0; }
 .issue-list small { color: #6f675e; }
 @media (max-width: 900px) { .app-header { grid-template-columns: 1fr auto; } .app-header nav { order: 3; grid-column: 1 / -1; justify-self: center; } .studio-workspace { grid-template-columns: 190px 1fr; } .step-content { padding: 34px 28px; } .personality-layout { grid-template-columns: 1fr; } }
+.onboarding-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 22px;
+}
+
+.onboarding-panel > div {
+  padding: 16px 18px;
+  border: 1px solid rgba(86, 69, 56, 0.14);
+  border-radius: 16px;
+  background: rgba(255, 250, 242, 0.78);
+}
+
+.onboarding-panel p { margin: 7px 0 0; color: var(--muted); line-height: 1.55; }
+
+@media (max-width: 720px) {
+  .onboarding-panel { grid-template-columns: 1fr; }
+}
