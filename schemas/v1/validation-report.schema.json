@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cozykin.local/schemas/v1/validation-report.schema.json",
+  "title": "CozyKin Validation Report v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "valid", "issues"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "valid": { "type": "boolean" },
+    "packageId": { "type": "string" }, "displayName": { "type": "string" },
+    "issues": { "type": "array", "items": { "$ref": "#/$defs/issue" } }
+  },
+  "$defs": {
+    "issue": {
+      "type": "object", "additionalProperties": false,
+      "required": ["errorCode", "severity", "file", "jsonPath", "expected", "actual", "message", "suggestedFix"],
+      "properties": {
+        "errorCode": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]+$" },
+        "severity": { "enum": ["error", "warning"] }, "file": { "type": "string" }, "jsonPath": { "type": "string" },
+        "expected": { "type": "string" }, "actual": { "type": "string" }, "message": { "type": "string" }, "suggestedFix": { "type": "string" }
+      }
+    }
+  }
+}

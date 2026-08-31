@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cozykin.local/schemas/v1/manifest.schema.json",
+  "title": "CozyKin Pack v1 Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "packageId", "displayName", "characterType", "author", "createdAt", "runtimeCompatibility", "canvas", "defaultScale", "entryBehavior"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "packageId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{2,63}$" },
+    "displayName": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "characterType": { "enum": ["cat", "dog", "other-pet", "original-person", "original-creature", "cartoon", "memorial", "custom"] },
+    "author": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "runtimeCompatibility": {
+      "type": "object", "additionalProperties": false, "required": ["minimumVersion"],
+      "properties": { "minimumVersion": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?$" } }
+    },
+    "canvas": {
+      "type": "object", "additionalProperties": false, "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 64, "maximum": 1024 },
+        "height": { "type": "integer", "minimum": 64, "maximum": 1024 }
+      }
+    },
+    "defaultScale": { "type": "number", "minimum": 0.4, "maximum": 1.5 },
+    "entryBehavior": { "type": "string", "pattern": "^[a-z][a-z0-9_-]{1,31}$" }
+  }
+}

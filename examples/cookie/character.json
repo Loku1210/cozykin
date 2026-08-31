@@ -1,0 +1,22 @@
+{
+  "name": "Cookie",
+  "description": "A calm, observant long-haired brown tabby companion.",
+  "relationship": { "userAddress": "Loku" },
+  "personality": { "energy": 0.45, "affection": 0.8, "curiosity": 0.72, "shyness": 0.28, "playfulness": 0.55 },
+  "preferences": { "likes": ["quiet company", "sunlit resting places"], "dislikes": ["sudden loud noises"] },
+  "appearance": {
+    "mustKeep": ["long dark brown tabby coat", "dense neck ruff", "dark forehead M", "golden eyes", "ear-tip furnishings", "broad fluffy tail"],
+    "mustNotChange": ["tabby identity", "face shape", "fur length", "eye color"]
+  },
+  "dialogues": {
+    "click": ["喵～", "purrr～", "Cookie 在这里。"],
+    "doubleClick": ["嗯，再摸摸。", "陪我待一会儿吧。"],
+    "rapidClick": ["慢一点……", "被你吓到了！"],
+    "hiss": ["哈——！不许再戳啦！"],
+    "drag": ["轻一点呀。", "要去哪里？"],
+    "sleep": ["呼……zzZZ"],
+    "wake": ["Cookie 醒来了。"],
+    "wander": ["我去看看。"]
+  },
+  "privacy": { "localOnly": true, "sourceDeclaration": "Generated from privately supplied reference photographs. Original photographs and metadata are not included." }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Pudding",
+  "description": "A warm, curious short-haired orange companion with broken rosettes and spotted tabby markings.",
+  "relationship": { "userAddress": "Loku" },
+  "personality": { "energy": 0.72, "affection": 0.82, "curiosity": 0.88, "shyness": 0.18, "playfulness": 0.78 },
+  "preferences": { "likes": ["sunlight", "exploring high places"], "dislikes": ["being ignored for too long"] },
+  "appearance": {
+    "mustKeep": ["short warm orange coat", "broken rosette-like spots mixed with narrow orange tabby lines", "cream muzzle and chin", "amber eyes", "small head relative to the torso", "long lean short-haired body", "large upright ears", "long patterned tail"],
+    "mustNotChange": ["spotted orange tabby identity", "small slender face shape", "elongated body proportions", "short fur", "eye color", "broken flank spots"]
+  },
+  "dialogues": {
+    "click": ["喵～", "purrr～", "我在这里呀。"],
+    "doubleClick": ["再摸摸我～", "今天也要一起玩！"],
+    "rapidClick": ["呜哇，慢一点！", "吓我一跳！"],
+    "hiss": ["哈——！别再戳啦！"],
+    "drag": ["轻一点嘛～", "要带小布丁去哪里？"],
+    "sleep": ["呼……zzZZ"],
+    "wake": ["唔，小布丁醒啦。"],
+    "wander": ["去那边看看！"]
+  },
+  "privacy": { "localOnly": true, "sourceDeclaration": "Generated from privately supplied reference photographs. Original photographs and metadata are not included." }
+}

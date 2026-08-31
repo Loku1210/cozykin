@@ -1,0 +1,26 @@
+{
+  "name": "Cookie（正面）",
+  "description": "A front-facing, broad long-haired dark tabby companion with golden eyes, a substantial neck ruff, tufted ears, and a full patterned tail.",
+  "relationship": { "userAddress": "Loku" },
+  "personality": { "energy": 0.56, "affection": 0.86, "curiosity": 0.74, "shyness": 0.28, "playfulness": 0.6 },
+  "preferences": { "likes": ["quiet company", "soft resting places"], "dislikes": ["abrupt noise"] },
+  "appearance": {
+    "mustKeep": ["broad fluffy dark brown-and-black tabby face", "bold dark forehead stripes", "two warm golden eyes", "large upright tufted ears", "very substantial long neck ruff", "broad long-haired body", "complete full patterned tail", "front-facing readable idle"],
+    "mustNotChange": ["dark long-haired tabby identity", "golden eye color", "broad ruff volume", "frontal idle readability", "closed-mouth neutral idle", "full tail"]
+  },
+  "dialogues": {
+    "click": ["喵。", "我在这里。", "呼噜……"],
+    "doubleClick": ["再陪我一会儿。", "好舒服呀。"],
+    "rapidClick": ["哈——慢一点。"],
+    "hiss": ["哈——！"],
+    "drag": ["轻一点嘛。", "要带我去哪里？"],
+    "sleep": ["呼……"],
+    "wake": ["唔，伸个懒腰。"],
+    "wander": ["去看看那边。"]
+  },
+  "presentation": {
+    "effectAnchors": { "sleep": { "x": 0.74, "y": 0.42 } },
+    "wakeVariants": [{ "behaviorId": "stretch", "weight": 1 }]
+  },
+  "privacy": { "localOnly": true, "sourceDeclaration": "Generated from privately supplied reference photographs. Original photographs, names, paths, and metadata are not included." }
+}

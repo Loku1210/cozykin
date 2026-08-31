@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0",
+  "packageId": "cozykin-pudding",
+  "displayName": "Pudding",
+  "characterType": "cat",
+  "author": "Loku",
+  "createdAt": "2026-07-17T00:00:00.000Z",
+  "runtimeCompatibility": { "minimumVersion": "0.1.0" },
+  "canvas": { "width": 512, "height": 512 },
+  "defaultScale": 0.75,
+  "entryBehavior": "idle"
+}

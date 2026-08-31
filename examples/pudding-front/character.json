@@ -1,0 +1,29 @@
+{
+  "name": "小布丁（正面）",
+  "description": "A front-facing seated version of the original Pudding: a lean, long-bodied warm-orange short-haired companion with a small wedge-shaped face, amber eyes, a cream muzzle and chest, softly broken curved tabby marks around the shoulders, dense low-contrast fur-direction dashes and mottling along the back, and naturally striped limbs and long tail.",
+  "relationship": { "userAddress": "Loku" },
+  "personality": { "energy": 0.72, "affection": 0.82, "curiosity": 0.88, "shyness": 0.18, "playfulness": 0.78 },
+  "preferences": { "likes": ["sunlight", "exploring high places"], "dislikes": ["being ignored for too long"] },
+  "appearance": {
+    "mustKeep": ["front-facing small wedge-shaped face", "canonical three-dimensional seated frontal idle with grounded haunches", "separated front paws and readable rear-body depth", "large upright ears", "two amber eyes", "cream muzzle, chin, and naturally blended lighter chest and belly", "lean long-bodied warm-orange short-haired build", "natural tabby markings on face and forehead", "soft curved and broken shoulder markings", "dense low-contrast fur-direction dashes and mottling on the back", "natural horizontal stripes on all four limbs", "long slender ringed tail", "full paws"],
+    "mustNotChange": ["original Pudding identity", "no standing paper-flat idle or two-leg frontal silhouette", "no repeated round spots of any size", "no hollow rosettes, black-edged rings, leopard flowers, or Bengal markings", "no continuous horizontal stripes across the torso or ribcage", "no straight ventral line of any color and no plush-toy seam", "short fur", "eye color", "frontal seated idle readability", "closed-mouth neutral idle"]
+  },
+  "dialogues": {
+    "click": ["喵～", "purrr～", "我在这里呀。"],
+    "doubleClick": ["再摸摸我～", "今天也要一起玩！"],
+    "rapidClick": ["呜哇，慢一点！", "吓我一跳！"],
+    "hiss": ["哈——！别再戳啦！"],
+    "drag": ["轻一点嘛～", "要带小布丁去哪里？"],
+    "sleep": ["呼……"],
+    "wake": ["唔，小布丁醒啦。"],
+    "wander": ["去那边看看！"]
+  },
+  "presentation": {
+    "effectAnchors": { "sleep": { "x": 0.79, "y": 0.68 } },
+    "wakeVariants": [
+      { "behaviorId": "stretch", "weight": 0.7 },
+      { "behaviorId": "wake-blep", "weight": 0.3 }
+    ]
+  },
+  "privacy": { "localOnly": true, "sourceDeclaration": "Generated from privately supplied reference photographs. Original photographs, names, paths, and metadata are not included." }
+}

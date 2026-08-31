@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1",
+  "packageId": "cozykin-cookie-front",
+  "displayName": "Cookie（正面）",
+  "characterType": "cat",
+  "author": "Loku",
+  "createdAt": "2026-08-08T00:00:00.000Z",
+  "runtimeCompatibility": { "minimumVersion": "0.2.0" },
+  "canvas": { "width": 512, "height": 512 },
+  "defaultScale": 0.75,
+  "entryBehavior": "idle"
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cozykin.local/schemas/v1/behaviors.schema.json",
+  "title": "CozyKin Behaviors v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["behaviors"],
+  "properties": {
+    "behaviors": { "type": "array", "minItems": 1, "maxItems": 40, "items": { "$ref": "#/$defs/behavior" } }
+  },
+  "$defs": {
+    "behaviorId": { "type": "string", "pattern": "^[a-z][a-z0-9_-]{1,31}$" },
+    "trigger": { "enum": ["startup", "behavior_complete", "single_click", "double_click", "rapid_click", "drag_start", "drag_end", "idle_timeout", "random"] },
+    "frame": { "type": "string", "pattern": "^assets/[a-z0-9_-]+/[a-z0-9._-]+\\.(png|webp)$", "maxLength": 180 },
+    "behavior": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "frames", "loop", "frameDurationMs", "weight", "triggers", "fallback", "mirrorable"],
+      "properties": {
+        "id": { "$ref": "#/$defs/behaviorId" },
+        "frames": { "type": "array", "minItems": 1, "maxItems": 120, "items": { "$ref": "#/$defs/frame" } },
+        "loop": { "type": "boolean" },
+        "frameDurationMs": { "type": "integer", "minimum": 40, "maximum": 2000 },
+        "frameDurationsMs": { "type": "array", "minItems": 1, "maxItems": 120, "items": { "type": "integer", "minimum": 40, "maximum": 6000 } },
+        "weight": { "type": "number", "minimum": 0, "maximum": 1 },
+        "triggers": { "type": "array", "maxItems": 8, "items": { "$ref": "#/$defs/trigger" }, "uniqueItems": true },
+        "fallback": { "$ref": "#/$defs/behaviorId" },
+        "mirrorable": { "type": "boolean" }
+      }
+    }
+  }
+}
