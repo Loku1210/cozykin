@@ -2,14 +2,14 @@
 
 ## Assembly boundary
 
-This staging tree was assembled from the reviewed positive list. It contains source/build inputs, schemas v1 and v1.1, four reviewed runtime Packs, brand/build/license resources, and six verification helpers. It contains no generated application output, dependency installation tree, repository metadata, archives, or test output.
+This staging tree was assembled from the reviewed positive list. It contains source/build inputs, schemas v1 and v1.1, four reviewed runtime Packs, brand/build/license resources, six verification helpers, and the 18-case responsibility-gate regression test. It contains no generated application output, dependency installation tree, repository metadata, archives, or test output.
 
 Safety declaration: 无来源追溯材料、私有照片、未授权第三方角色素材、交付物目录。
 
 ## Counts
 
-- Total files: 268
-- A — source/build inputs: 35 (8 root build inputs + 27 files under `src/`)
+- Total files: 271
+- A — source/build inputs: 36 (9 root build inputs, including `.gitignore`, + 27 files under `src/`)
 - B — runtime schemas: 10
 - C — four runtime Packs: 210
   - cookie: 52
@@ -18,12 +18,14 @@ Safety declaration: 无来源追溯材料、私有照片、未授权第三方角
   - pudding-front: 56
 - D — brand/build/license resources: 6
 - E — verification helpers: 6
+- F — responsibility-gate regression test and Vitest configuration: 2
 - This manifest: 1
 
 ## Complete file tree
 
 ```text
 .
+./.gitignore
 ./ARTWORK_LICENSE.md
 ./LICENSE
 ./STAGING_MANIFEST.md
@@ -361,8 +363,11 @@ Safety declaration: 无来源追溯材料、私有照片、未授权第三方角
 ./src/shared/types.ts
 ./src/shared/validation.ts
 ./studio.html
+./test
+./test/responsibility-gate.test.ts
 ./tsconfig.base.json
 ./tsconfig.main.json
 ./tsconfig.renderer.json
 ./vite.config.ts
+./vitest.config.ts
 ```
