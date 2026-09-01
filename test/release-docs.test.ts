@@ -12,4 +12,9 @@ describe('release documentation truth', () => {
     expect(status).toContain('结构验证');
     expect(status).toContain('audit:release');
   });
+
+  it('builds ignored example archives before clean-clone importer verification', () => {
+    const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
+    expect(pkg.scripts.verify).toContain('npm run examples:zip && npm run test:importer');
+  });
 });

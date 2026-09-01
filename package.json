@@ -21,7 +21,7 @@
     "audit:brand": "node scripts/brand-audit.mjs",
     "audit:release": "node scripts/release-audit.mjs",
     "examples:zip": "node scripts/build-example-packs.mjs",
-    "verify": "npm run typecheck && npm test && npm run build && npm run test:importer && npm run audit:brand",
+    "verify": "npm run typecheck && npm test && npm run build && npm run examples:zip && npm run test:importer && npm run test:runtime:presentation && npm run audit:brand",
     "build:mac:arm64": "npm run build && electron-builder --mac --arm64",
     "build:win:x64": "npm run build && electron-builder --win --x64"
   },
