@@ -19,6 +19,7 @@ npm run test:importer
 npm run test:runtime:presentation
 npm run audit:brand
 npm run build:mac:arm64
+npm run build:mac:universal
 npm run build:win:x64
 npm run audit:release
 ```

@@ -23,6 +23,7 @@
     "examples:zip": "node scripts/build-example-packs.mjs",
     "verify": "npm run typecheck && npm test && npm run build && npm run examples:zip && npm run test:importer && npm run test:runtime:presentation && npm run audit:brand",
     "build:mac:arm64": "npm run build && electron-builder --mac --arm64",
+    "build:mac:universal": "npm run build && electron-builder --mac --universal",
     "build:win:x64": "npm run build && electron-builder --win --x64"
   },
   "dependencies": {

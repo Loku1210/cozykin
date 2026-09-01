@@ -5,7 +5,7 @@ Generated from commit branch `codex/final-optimization-20260831` on Apple Silico
 | Artifact | Bytes | SHA256 | Verification scope |
 |---|---:|---|---|
 | `CozyKin-0.2.1-arm64.dmg` | 165,663,889 | `341421b7ced708511db2539b24b93d7833d05caca5c43656b9dc2554265419d9` | macOS arm64 package, payload audit, isolated-profile GUI smoke |
-| `CozyKin-0.2.1-universal.dmg` | 262,289,000 | `040129e2188d5cf816218b3e778186137fd5bed058c4b79bc912166160a65215` | macOS x64+arm64 package and payload audit; no Intel runtime host check |
+| `CozyKin-0.2.1-universal.dmg` | 262,288,928 | `116fa1e3ee65b09adb59edc3e3bd78237469bc0a47ce81d960c91f45944b3dbb` | Rebuilt with `npm run build:mac:universal`; macOS x64+arm64 package and payload audit; no Intel runtime host check |
 | `CozyKin Setup 0.2.1.exe` | 132,035,405 | `d0ecbcd7c1df5df3d5cc731e59fc50171ac5ef758baf740f7767dcd20c7025bd` | NSIS installer structure; unpacked application is PE32+ x86-64; no Windows host check |
 
 ## Signing state

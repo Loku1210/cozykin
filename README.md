@@ -34,9 +34,9 @@ npm start          # launch the desktop app
 
 ## Desktop candidates
 
-- **macOS arm64** and **Windows x64** are the release-candidate targets.
+- **macOS arm64**, **macOS universal** and **Windows x64** are the release-candidate targets.
 - Current local packages are **未签名、未公证**. macOS may show Gatekeeper guidance; Windows may show SmartScreen guidance. Do not present these builds as trusted-signed installers.
-- macOS arm64 receives local build, payload audit, and GUI smoke. Windows x64 receives cross-build and packaged-file **结构验证** only; **Windows 真机** installation and runtime acceptance remain external work.
+- macOS arm64 receives local build, payload audit, and GUI smoke. The macOS universal package receives build and payload audit only; there is **no Intel (x64) runtime host check**. Windows x64 receives cross-build and packaged-file **结构验证** only; **Windows 真机** installation and runtime acceptance remain external work.
 - Pack 内容与素材权利由导入者负责。The importer checks archive structure, schema, paths, file types, and explicit responsibility acknowledgement; it cannot establish copyright, consent, likeness rights, or commercial permission.
 
 See `RELEASE_STATUS.md` for the exact evidence and open external checks.
@@ -53,6 +53,7 @@ npm run audit:brand
 
 # Candidate packages
 npm run build:mac:arm64
+npm run build:mac:universal
 npm run build:win:x64
 npm run audit:release
 ```
