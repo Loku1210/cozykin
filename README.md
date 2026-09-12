@@ -24,7 +24,56 @@ and importing it through a safety-checked, responsibility-gated importer.
   commercially"* — that is unchecked by default, disables install until accepted,
   resets when you change or re-import a Pack, and is never persisted.
 
-## Install (development)
+## Install
+
+### Install from a Release (recommended for most users)
+
+Download the package for your platform from the project's **GitHub Releases**, together
+with `SHA256SUMS.txt`. The builds are **unsigned and un-notarized**, so verify the
+checksum first, and only then bypass the OS security prompt.
+
+> Only download from the official GitHub Release. Do not run repackaged builds from
+> netdisks, group files, third-party sites, or unknown links.
+
+#### macOS
+
+1. Download the DMG that matches your Mac:
+   - **Apple Silicon** (M1/M2/M3/M4): `CozyKin-0.2.1-arm64.dmg`
+   - **Intel** (or if unsure): `CozyKin-0.2.1-universal.dmg`
+2. Verify the checksum. In Terminal, `cd` to where you downloaded it, then run and
+   compare the output line-by-line against `SHA256SUMS.txt`:
+   ```bash
+   cd ~/Downloads
+   shasum -a 256 CozyKin-0.2.1-arm64.dmg
+   # Apple Silicon expected:
+   # 341421b7ced708511db2539b24b93d7833d05caca5c43656b9dc2554265419d9
+   ```
+3. Open the DMG and drag **CozyKin** into the **Applications** folder.
+4. First launch (the app is unsigned). If macOS says CozyKin "cannot be opened" or is
+   "damaged", **only after the SHA256 matches**, do either:
+   - Right-click the app icon → **Open** → click **Open** again in the dialog; **or**
+   - Remove the quarantine flag and launch it from Terminal:
+     ```bash
+     xattr -cr "/Applications/CozyKin.app"
+     open "/Applications/CozyKin.app"
+     ```
+
+#### Windows (x64)
+
+1. Download the installer: `CozyKin.Setup.0.2.1.exe`.
+2. Verify the checksum. In PowerShell, run and compare `Hash` against the value in
+   `SHA256SUMS.txt`:
+   ```powershell
+   Get-FileHash "$env:USERPROFILE\Downloads\CozyKin.Setup.0.2.1.exe" -Algorithm SHA256
+   # expected:
+   # D0ECBCD7C1DF5DF3D5CC731E59FC50171AC5EF758BAF740F7767DCD20C7025BD
+   ```
+   (The hash is compared by value; the filename in `SHA256SUMS.txt` may differ.)
+3. Double-click `CozyKin.Setup.0.2.1.exe` to run the installer.
+4. First launch (unknown publisher). If Windows SmartScreen blocks it, **only after the
+   SHA256 matches**, click **More info → Run anyway**.
+
+### Run from source (development)
 
 Requirements: Node.js 20+.
 
@@ -106,7 +155,53 @@ CozyKin 是一款带 DIY 换肤生态的桌面宠物应用。它内置两只原�
   *"我对生成的角色负责，且不会将其用于商业分发"* —— 默认不勾选，未接受前禁用安装，
   更换或重新导入 Pack 时重置，且从不持久化保存。
 
-## 安装（开发）
+## 安装
+
+### 从 Release 安装（推荐，适合大多数用户）
+
+从项目的 **GitHub Releases** 下载对应平台的安装包，以及一起发布的 `SHA256SUMS.txt`。
+候选包**未签名、未公证**，所以请先核对 SHA256 校验值，确认无误后再绕过系统的安全提示。
+
+> 只从官方 GitHub Release 下载。不要运行来自网盘、群文件、第三方网站或不明链接的
+> 二次打包安装包。
+
+#### macOS
+
+1. 按你的 Mac 下载对应 DMG：
+   - **Apple Silicon**（M1/M2/M3/M4）：`CozyKin-0.2.1-arm64.dmg`
+   - **Intel**（或不确定时）：`CozyKin-0.2.1-universal.dmg`
+2. 校验哈希。打开「终端」，`cd` 到下载目录，运行下面命令并与 `SHA256SUMS.txt` 逐行比对：
+   ```bash
+   cd ~/Downloads
+   shasum -a 256 CozyKin-0.2.1-arm64.dmg
+   # Apple Silicon 应为：
+   # 341421b7ced708511db2539b24b93d7833d05caca5c43656b9dc2554265419d9
+   ```
+3. 打开 DMG，把 **CozyKin** 拖进 **Applications（应用程序）** 文件夹。
+4. 首次打开（应用未签名）。若 macOS 提示 CozyKin"无法打开"或"已损坏"，**务必在 SHA256
+   一致后**，任选其一：
+   - 右键点击应用图标 → **打开** → 在弹窗里再点 **打开**；**或**
+   - 在终端清除隔离标记再启动：
+     ```bash
+     xattr -cr "/Applications/CozyKin.app"
+     open "/Applications/CozyKin.app"
+     ```
+
+#### Windows（x64）
+
+1. 下载安装包：`CozyKin.Setup.0.2.1.exe`。
+2. 校验哈希。在 PowerShell 里运行，并把 `Hash` 与 `SHA256SUMS.txt` 中的值比对：
+   ```powershell
+   Get-FileHash "$env:USERPROFILE\Downloads\CozyKin.Setup.0.2.1.exe" -Algorithm SHA256
+   # 应为：
+   # D0ECBCD7C1DF5DF3D5CC731E59FC50171AC5EF758BAF740F7767DCD20C7025BD
+   ```
+   （按哈希**值**比对即可；`SHA256SUMS.txt` 里记录的文件名可能不同。）
+3. 双击 `CozyKin.Setup.0.2.1.exe` 运行安装程序。
+4. 首次打开（未知发布者）。若 Windows SmartScreen 拦截，**务必在 SHA256 一致后**，
+   点击 **更多信息 → 仍要运行**。
+
+### 从源码运行（开发）
 
 环境要求：Node.js 20+。
 
