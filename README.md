@@ -138,7 +138,7 @@ any other skin is generator-only and imported at your own responsibility.
 <p align="center"><a href="#cozykin">English</a> · <b>简体中文</b></p>
 
 CozyKin 是一款带 DIY 换肤生态的桌面宠物应用。它内置两只原创猫角色 —— **cookie** 与
-**pudding**，并支持你用自己的 agent 生成一个自包含的角色 *Pack*，再通过带安全校验、
+**pudding**，并支持用户使用自己的 agent 生成一个自包含的角色 *Pack*，再通过带安全校验、
 责任确认门的导入器把专属的情感陪伴皮肤导入进来。
 
 > 版本 0.2.1。源码采用 MIT 许可（见 `LICENSE`）；内置的原创角色美术与文案采用单独的
@@ -250,9 +250,9 @@ npm run audit:release
 ## 伦理与边界
 
 Prompt Generator 可以描述敏感角色（例如真实人物或纪念性角色）。对这类角色，CozyKin
-只帮你生成提示词 —— 不会替你生成、存储或分发成品肖像，草稿仅保留在本地。你需自行确保
+只帮用户生成提示词 —— 不会替用户生成、存储或分发成品肖像，草稿仅保留在本地。用户需自行确保
 拥有喂给自己 agent 的任何照片或素材的权利。随应用分发的仅限两只原创猫；其他任何皮肤都
-只能通过生成器产生，并由你自行承担导入责任。
+只能通过生成器产生，并由用户自行承担导入责任。
 
 ## 许可
 
